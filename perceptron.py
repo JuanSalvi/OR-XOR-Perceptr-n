@@ -50,11 +50,14 @@ def plot_decision_boundary(X, y, perceptron):
 
 def main():
     # Paso 1: Leer los datos de entrenamiento y prueba desde los archivos CSV
-    X_train, y_train = read_data("C:/Users/Salvi/Documents/Universidad/9 SEMESTRE/SEM Inteligencia Artificial II/Practica 1/XOR_trn.csv")
-    X_test, y_test = read_data("C:/Users/Salvi/Documents/Universidad/9 SEMESTRE/SEM Inteligencia Artificial II/Practica 1/XOR_tst.csv")
     
-    # X_train, y_train = read_data("C:/Users/Salvi/Documents/Universidad/9 SEMESTRE/SEM Inteligencia Artificial II/Practica 1/OR_trn.csv")
-    # X_test, y_test = read_data("C:/Users/Salvi/Documents/Universidad/9 SEMESTRE/SEM Inteligencia Artificial II/Practica 1/OR_tst.csv")
+    # ---- Dataset XOR ----
+    X_train, y_train = read_data("XOR_trn.csv")
+    X_test, y_test = read_data("XOR_tst.csv")
+
+    # ---- Dataset OR ----
+    # X_train, y_train = read_data("OR_trn.csv")
+    # X_test, y_test = read_data("OR_tst.csv")
     
     # Paso 2: Crear y entrenar el perceptrón
     perceptron = Perceptron(num_inputs=len(X_train[0]))
